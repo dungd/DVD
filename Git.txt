@@ -1,0 +1,29 @@
+﻿====================GIT===========================
+Repository(Kho): Nơi chứa dữ liệu chính.
+Index: nơi chứa dữ liệu để chuyển bị cho việc commit lên repository.
+Work Tree: nơi thực hiện công việc hiện tại.
+Branch: tạo ra nhánh độc lập để thao tác mà k sợ ảnh hưởng đến nhánh khác.
+Master: Nhánh mặc định
+Merge: hợp nhánh
+
+b1: Tạo new Repository
+b2: tạo repository trên máy của mình bằng teminal 
+- git init: tạo mới một repository
+- git status: kiểm tra trạng thái của file trong repository
+- git add: thêm file vào trong staging area (ổ chứa tạm thời).phải lưu vào đây 
+mới commit được lên git.
+---> nếu muốn add cả thư mục thì cú pháp sau git add . 
+---> nếu muốn add từng file thì cú pháp sau git add tên file.
+- git commit -m "first commit"
+-> sau khi commit xong thi kiem tra log bằng cú pháp: 
+- git remote add origin https://github.com/dungd/Toong_Axalize.git
+- git push -u origin master
+- git pull: cập nhật source code từ trên git về. 
+*********** Tạo Branch mới. 
+- git branch ten_branch: tạo nhánh mới
+- git branch: kiểm tra lại số nhánh đã được tạo.
+- git checkout ten_nhanh: chuyển thao tác sang nhánh muốn thao tác.
+**** sau khi kiểm tra ở nhánh phụ xong, muốn merge nhánh phụ vào nhánh chính thì
+dùng lệnh sau:
+- git merge ten_nhanh_muon_hop: tên nhánh muốn gộp vào nhánh chính.
+- sau đó git push để đẩy lên git.

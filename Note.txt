@@ -1,0 +1,35 @@
+﻿- git init : tạo nhánh repo mới
+- git clone đường dẫn : lấy repo về máy.
+- git add <tên file> : thêm mới file chỉ định
++ git add . : thêm tất cả file mới
+- git commit -m "ghi chú bắt buộc"
+- git commit --amend -m "Message mô tả thay đổi": lưu lại thay đổi những gì 
+đè lên commit.
+git commit --amend --author "Nguyen Huu Kim <nguyen.huu.kim@framgia.com>" : ghi
+đè commit trước đó và đổi người commit
+- git push origin master: đấy code lên nhánh master.
++ git push origin -u <link repo> master
+- git remote add origin <URL repo>: kết nối tới repo nhưng chưa clone về máy.
+- git checkout -b <tên nhánh>: tạo nhánh mới
+- git chechout master: trở lại nhánh master.
+- git branch: kiểm tra các nhánh hiện tại
+- git branch <tên nhánh>: tạo mới một nhánh
+- git branch -b <tên nhánh>: để chuyển và tạo nhánh.
+- git branch -d <tên nhánh>: Xóa nhánh mà mk muốn.
+- git push origin <nhánh>: đẩy nhánh đó lên remote repo.
+- git pull: lấy thư mục từ repo về local
+- git merge <nhánh>: hợp vào nhánh chính
+=> sau khi merge xong thì phải chạy lênh
+- git add <tên tập tin>
+=> trước khi trộn các thay đổi bạn có thể xem trước chúng bằng:
+- git diff <nhánh nguồn> <nhánh mục tiêu>
+=> gắn nhãn tagging
+- git tag <tên tag> <chuỗi ID>
+- git log : để xem chuỗi ID
+- git checkout --<tên tập tin>: thay thế những ndung mới nhất trong tree bằng
+nội dung mới nhất của HEAD.
+- git fetch origin: hủy tất cả những thay đổi và commit cục bộ, lấy về (fetch)
+lịch sử gần nhất.
+- git reset --hard origin/master
+- git rebase -i HEAD~: gộp commit
+~ số commit muốn gộp.
