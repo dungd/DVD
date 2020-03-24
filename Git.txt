@@ -27,3 +27,5 @@ mới commit được lên git.
 dùng lệnh sau:
 - git merge ten_nhanh_muon_hop: tên nhánh muốn gộp vào nhánh chính.
 - sau đó git push để đẩy lên git.
+
+--- noi dung edit day nay`
