@@ -10,7 +10,7 @@ git commit --amend --author "Nguyen Huu Kim <nguyen.huu.kim@framgia.com>" : ghi
 - git push origin master: đấy code lên nhánh master.
 + git push origin -u <link repo> master
 - git remote add origin <URL repo>: kết nối tới repo nhưng chưa clone về máy.
-- git checkout -b <tên nhánh>: tạo nhánh mới
+- git checkout -b <tên nhánh>: chuyển qua nhánh mình muốn.
 - git chechout master: trở lại nhánh master.
 - git branch: kiểm tra các nhánh hiện tại
 - git branch <tên nhánh>: tạo mới một nhánh
@@ -32,4 +32,4 @@ nội dung mới nhất của HEAD.
 lịch sử gần nhất.
 - git reset --hard origin/master
 - git rebase -i HEAD~: gộp commit
-~ số commit muốn gộp.
+~ số commit muốn gộp.abc
