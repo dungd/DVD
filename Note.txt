@@ -5,8 +5,9 @@
 - git commit -m "ghi chú bắt buộc"
 - git commit --amend -m "Message mô tả thay đổi": lưu lại thay đổi những gì 
 đè lên commit.
-git commit --amend --author "Nguyen Huu Kim <nguyen.huu.kim@framgia.com>" : ghi
+- git commit --amend --author "Nguyen Huu Kim <nguyen.huu.kim@framgia.com>" : ghi
 đè commit trước đó và đổi người commit
+- git commit --amend: tiếp tục tạo ra bản sao (VD:C2 bản sao sẽ là C2') và trỏ tới C2'
 - git push origin master: đấy code lên nhánh master.
 + git push origin -u <link repo> master
 - git remote add origin <URL repo>: kết nối tới repo nhưng chưa clone về máy.
@@ -16,8 +17,10 @@ git commit --amend --author "Nguyen Huu Kim <nguyen.huu.kim@framgia.com>" : ghi
 - git branch <tên nhánh>: tạo mới một nhánh
 - git branch -b <tên nhánh>: để chuyển và tạo nhánh.
 - git branch -d <tên nhánh>: Xóa nhánh mà mk muốn.
+- git push --set-upstream origin Repository1 : tạo nhánh mới trên gitHUB
 - git push origin <nhánh>: đẩy nhánh đó lên remote repo.
 - git pull: lấy thư mục từ repo về local
+- git pull <tên-remote> <tên-remote-branch>: cập nhật thay đổi từ server về máy
 - git merge <nhánh>: hợp vào nhánh chính
 => sau khi merge xong thì phải chạy lênh
 - git add <tên tập tin>
@@ -30,6 +33,17 @@ git commit --amend --author "Nguyen Huu Kim <nguyen.huu.kim@framgia.com>" : ghi
 nội dung mới nhất của HEAD.
 - git fetch origin: hủy tất cả những thay đổi và commit cục bộ, lấy về (fetch)
 lịch sử gần nhất.
+- git fetch <tên-remote> <tên-remote-branch> kéo thay đổi từ server về và merge 
+luôn những thay đổi đó ngay.
+- 
 - git reset --hard origin/master
-- git rebase -i HEAD~: gộp commit
-~ số commit muốn gộp.abc
+- git rebase -i HEAD~2: gộp commit và tạo ra các bản sao giống với rebase
+~ số commit muốn gộp.
+- git rebase <tên nhánh muốn copy sang>: tạo nhánh ảo của cả cây đó.
+- git cherry-pick c2 c4: copy c2 và c4  nhưng k copy c3 (khác biệt giữa rebase
+và cherry-pick)
+=> muốn hủy thao tác.
+- git reset : dịch chuyển lên commit cũ hơn.
+VD: git reset HEAD~1
+- git revert HEAD : đẩy thêm một commit ảo C2' từ C2 và master sẽ trỏ ngay đến C2'
+
